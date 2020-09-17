@@ -1,0 +1,39 @@
+Compile as:
+
+g++ VC-es15btech11002.cpp -std=c++14 -o vc -pthread
+
+g++ SK-es15btech11002.cpp -std=c++14 -o sk -pthread
+
+Run as:
+
+./vc
+./sk
+
+It produces 3 Files
+
+VC-log.txt
+SK-log.txt
+
+The content of inp-params.txt should be like
+
+n lambda alpha m
+vertexi no.of edges e1 e2 e3 ....en
+
+ex:
+for number of processes = 14, and a complete graph:
+
+14 5 1.5 50
+0 13 1 2 3 4 5 6 7 8 9 10 11 12 13 
+1 13 0 2 3 4 5 6 7 8 9 10 11 12 13 
+2 13 0 1 3 4 5 6 7 8 9 10 11 12 13 
+3 13 0 1 2 4 5 6 7 8 9 10 11 12 13 
+4 13 0 1 2 3 5 6 7 8 9 10 11 12 13 
+5 13 0 1 2 3 4 6 7 8 9 10 11 12 13 
+6 13 0 1 2 3 4 5 7 8 9 10 11 12 13 
+7 13 0 1 2 3 4 5 6 8 9 10 11 12 13 
+8 13 0 1 2 3 4 5 6 7 9 10 11 12 13 
+9 13 0 1 2 3 4 5 6 7 8 10 11 12 13 
+10 13 0 1 2 3 4 5 6 7 8 9 11 12 13 
+11 13 0 1 2 3 4 5 6 7 8 9 10 12 13 
+12 13 0 1 2 3 4 5 6 7 8 9 10 11 13 
+13 13 0 1 2 3 4 5 6 7 8 9 10 11 12 

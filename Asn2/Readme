@@ -1,0 +1,86 @@
+Chandy-Lamport
+
+Compile as: mpic++ ProgAssn2-es15btech11002_Chandy-Lamport.cpp -pthread -o chandy-lamport
+
+Run as: mpirun -np NUM_PROCESSES+1 ./chandy-lamport
+
+Lai-Yang
+
+Compile as: mpic++ ProgAssn2-es15btech11002_Lai-Yang.cpp -pthread -o lai-yang
+
+Run as: mpirun -np NUM_PROCESSES+1 ./lai-yang
+
+
+Note:
+
+The programs assume a inp-params.txt file to be in the same directory as of this the source code file
+
+The content of inp-params.txt should be as follows
+
+
+Chandy-Lamport:
+
+n A T lambda
+vertexi no.of edges e1 e2 e3 ....en
+...
+
+where,
+
+n is the total number of processes
+A is the initial amount with each bank
+T is the threshold amount worth of transaction which can occur
+lambda is the average value used for exponentially distributed sleep time
+
+ex:
+
+for n=10, A=100, T=10, lambda=2, and a completely connected graph
+input should be as:
+
+10 100 10 2
+0 1 1
+1 10 2 3 4 5 6 7 8 9 10 0 
+2 9 1 3 4 5 6 7 8 9 10
+3 9 1 2 4 5 6 7 8 9 10
+4 9 1 2 3 5 6 7 8 9 10
+5 9 1 2 3 4 6 7 8 9 10
+6 9 1 2 3 4 5 7 8 9 10
+7 9 1 2 3 4 5 6 8 9 10
+8 9 1 2 3 4 5 6 7 9 10
+9 9 1 2 3 4 5 6 7 8 10
+10 9 1 2 3 4 5 6 7 8 9
+
+Lai-Yang
+Apart from the input mentioned for Chandy-Lamport's inp-params, a spanning tree of the graph should be given as the input
+
+n A T lambda
+vertexi no.of edges e1 e2 e3 ....en
+...
+vertexj no. of edges e1' e2' .... en'
+...
+
+ex:
+
+For the same setup as mentioned in chandy-lamport's inp-params.txt
+
+10 100 10 2
+1 10 2 3 4 5 6 7 8 9 10 0 
+2 9 1 3 4 5 6 7 8 9 10
+3 9 1 2 4 5 6 7 8 9 10
+4 9 1 2 3 5 6 7 8 9 10
+5 9 1 2 3 4 6 7 8 9 10
+6 9 1 2 3 4 5 7 8 9 10
+7 9 1 2 3 4 5 6 8 9 10
+8 9 1 2 3 4 5 6 7 9 10
+9 9 1 2 3 4 5 6 7 8 10
+10 9 1 2 3 4 5 6 7 8 9
+0 1 1
+1 3 2 3 7
+2 2 4 10
+3 3 5 8 9
+4 1 6
+5 0
+6 0
+7 0
+8 0
+9 0
+10 0
